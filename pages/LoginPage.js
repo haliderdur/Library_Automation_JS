@@ -2,7 +2,7 @@ import {BasePage} from "./BasePage.js";
 
 export class LoginPage extends BasePage {
   
-  // ADD YOUR LOCATORS HERE...
+  // ADD LOCATORS HERE...
   /**
    * @param {import('playwright').Page} page
    */
@@ -10,10 +10,8 @@ export class LoginPage extends BasePage {
     super(page);
     this.usernameInput = page.locator("//input[@id='inputEmail']");
     this.passwordInput = page.locator("//input[@id='inputPassword']");
-    this.loginButton = page.locator(
-      "//button[text()='Sign in' and @type='submit']"
-    );
-    
+    this.loginButton = page.locator("//button[text()='Sign in' and @type='submit']");
+    this.loginErrorMessage = page.locator("//div[@class='alert alert-danger' and @role='alert']");
   }
 
   /**

@@ -5,6 +5,13 @@ export class BrowserUtility {
     }
 
     // ADD YOUR OWN BROWSER UTILITY FUNCTIONS HERE...
+
+    static async verifyMessages(expected, actual) {
+        return new Promise((resolve) => {
+                resolve(expected.toString === actual.toString());
+        });
+    }
+      
     
 
 }

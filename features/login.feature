@@ -9,7 +9,7 @@ Feature: Login to the application
 
   Background:
     Given user is already on the login page
-
+@lib-01-01
   Scenario Outline: Verify users can login with valid credentials
     When user enters valid username '<user-type>'
     And user enters valid password '<user-type>'
@@ -20,12 +20,23 @@ Feature: Login to the application
       | admin     |
       | studen    |
 
+@lib-01-02
+  Scenario Outline: Verify users can not login with invalid credentials
+  When user enters invalid username '<invalid_username>'
+  And user enters invalid password '<invalid_password>'
+  And user clicks the login button
+  Then user should see "Sorry, Wrong Email or Password" error pop-up
+  Examples:
+  | invalid_username   | invalid_password    |
+  | library@student    | password123         |
+  | library@cydeo      | librarypassword     |
+  
+  
 
-# TODO: Verify users can not login with invalid credentials
-
-
-# TODO: Verify users are not allowed to login without any credentials
-
+@lib-01-03
+  Scenario: Verify users are not allowed to login without any credentials
+    When user clicks the login button
+    Then user should see "This field is required." error pop-up
 
     #? Should there be more scenarios for this user story? Feel free to add more scenarios.
 
