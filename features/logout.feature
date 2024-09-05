@@ -10,7 +10,6 @@ Feature: Logout from the application
       Given user is already on the login page
 
 @lib-02-01
-    # TODO: verify users can logout from the app
     Scenario Outline: User logout from the homepage
       Given user is already logged in as "<user-type>"
       When user clicks the user profile on top right corner of the page
