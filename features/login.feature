@@ -18,7 +18,7 @@ Feature: Login to the application
     Examples:
       | user-type |
       | admin     |
-      | studen    |
+      | student   |
 
 @lib-01-02
   Scenario Outline: Verify users can not login with invalid credentials
