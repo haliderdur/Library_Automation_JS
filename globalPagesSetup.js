@@ -11,6 +11,7 @@ import { UsersPage } from "./pages/UsersPage.js";
 /** @typedef {import('./pages/DashboardPage.js').DashboardPage} DashboardPage */
 /** @typedef {import('./pages/UsersPage.js').UsersPage} UsersPage */
 // ADD YOUR OWN TYPEDEFS HERE...
+
 export class PageManager {
 
   /** @type {import('playwright').Page} */
@@ -45,8 +46,6 @@ export class PageManager {
     PageManager.dashboardPage = new DashboardPage(page);
     PageManager.usersPage = new UsersPage(page);
     // INITIALIZE PAGE INSTANCES HERE...
-
-
   }
 
 }

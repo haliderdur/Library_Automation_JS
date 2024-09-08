@@ -9,7 +9,6 @@ Feature: Book Categories
     #*      , Biography/Autobiography ,Romance, Short Story, Essay, Memoir, Poetry           
 
     
-    # TODO: verify users see 21 book categories
 @lib-03-01
     Scenario Outline: Users see all 21 book categories under Book Categories dropdown
     Given user is already on the login page
@@ -22,16 +21,15 @@ Feature: Book Categories
     |admin    |
     |student  |
 
-    # TODO: verify that all 21 book categories are displayed under Book Categories dropdown
  @lib-03-02
     Scenario Outline: Users see all 21 book categories in the Book Categories dropdown
     Given user is already on the login page
     When user is already logged in as "<user-type>"
     And user clicks the Books section
     And user clicks books category dropdown 
-    Then book category name "<category>" should be inlcuded in the categories
+    Then book category name "<book-category-name>" should be inlcuded in the categories
     Examples:
-     | user-type | category                |
+     | user-type | book-category-name      |
      | admin     | ALL                     |
      | admin     | Action and Adventure    |
      | admin     | Anthology               |
@@ -74,6 +72,5 @@ Feature: Book Categories
      | student   | Essay                   |
      | student   | Memoir                  |
      | student   | Poetry                  | 
-
      
     #? Should there be more scenarios for this user story? Feel free to add more scenarios.
