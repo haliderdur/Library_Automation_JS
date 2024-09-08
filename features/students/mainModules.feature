@@ -10,4 +10,3 @@ Feature: Main modules of the application
   
 
     #? Should there be more scenarios for this user story? feel free to add more scenarios
-
