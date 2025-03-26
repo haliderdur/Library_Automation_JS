@@ -3,9 +3,6 @@ import { expect } from '@playwright/test';
 import { BrowserUtility } from '../utilities/BrowserUtility.js';
 import { PageManager } from "../globalPagesSetup.js";
 
-
-// WRITE YOUR STEP DEFINITIONS HERE...
-
 Given('user is already logged in as {string}', async function (string) {
   await PageManager.loginPage.login(string);
 });

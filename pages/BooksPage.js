@@ -16,7 +16,8 @@ export class BooksPage extends BasePage {
    * @returns {Promise<number>}
    */
     async getTotalBookOptions() {
-      return await this.bookCategoriesDropdown.locator("option").count();
+      const TOTAL_BOOK_OPTIONS = await this.bookCategoriesDropdown.locator("option").count();
+      return TOTAL_BOOK_OPTIONS;
     }
 
   /**
